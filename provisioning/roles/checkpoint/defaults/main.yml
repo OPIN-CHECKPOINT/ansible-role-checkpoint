@@ -28,29 +28,29 @@ blocks_version: "HEAD"
 blocks_keep_updated: no
 
 # Context
-context_repo_url: "https://github.com/OPIN-CHECKPOINT/context.git"
-context_version: "HEAD"
-context_keep_updated: no
+contexts_repo_url: "https://github.com/OPIN-CHECKPOINT/contexts.git"
+contexts_version: "HEAD"
+contexts_keep_updated: no
 
 # Forms
 forms_repo_url: "https://github.com/OPIN-CHECKPOINT/forms.git"
 forms_version: "HEAD"
 forms_keep_updated: no
 
-# Media
-media_repo_url: "https://github.com/OPIN-CHECKPOINT/media.git"
-media_version: "HEAD"
-media_keep_updated: no
+# Digital Assets
+digital_assets_repo_url: "https://github.com/OPIN-CHECKPOINT/digital_assets.git"
+digital_assets_version: "HEAD"
+digital_assets_keep_updated: no
 
 # Development
 development_repo_url: "https://github.com/OPIN-CHECKPOINT/development.git"
 development_version: "HEAD"
 development_keep_updated: no
 
-# Feeds
-feeds_repo_url: "https://github.com/OPIN-CHECKPOINT/feeds.git"
-feeds_version: "HEAD"
-feeds_keep_updated: no
+# Web Service
+web_service_repo_url: "https://github.com/OPIN-CHECKPOINT/web_service.git"
+web_service_version: "HEAD"
+web_service_keep_updated: no
 
 # Migration
 migration_repo_url: "https://github.com/OPIN-CHECKPOINT/migration.git"
@@ -62,17 +62,17 @@ multilingual_repo_url: "https://github.com/OPIN-CHECKPOINT/multilingual.git"
 multilingual_version: "HEAD"
 multilingual_keep_updated: no
 
-# Security
-security_repo_url: "https://github.com/OPIN-CHECKPOINT/security.git"
-security_version: "HEAD"
-security_keep_updated: no
+# Secure
+secure_repo_url: "https://github.com/OPIN-CHECKPOINT/secure.git"
+secure_version: "HEAD"
+secure_keep_updated: no
 
-# Workflow
-workflow_repo_url: "https://github.com/OPIN-CHECKPOINT/workflow.git"
-workflow_version: "HEAD"
-workflow_keep_updated: no
+# Lifecycle
+lifecycle_repo_url: "https://github.com/OPIN-CHECKPOINT/lifecycle.git"
+lifecycle_version: "HEAD"
+lifecycle_keep_updated: no
 
-# Views
-views_repo_url: "https://github.com/OPIN-CHECKPOINT/views.git"
-views_version: "HEAD"
-views_keep_updated: no
+# Displays
+displays_repo_url: "https://github.com/OPIN-CHECKPOINT/displays.git"
+displays_version: "HEAD"
+displays_keep_updated: no

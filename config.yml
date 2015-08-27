@@ -42,13 +42,13 @@ checkpoint_modules:
   - audit
   - authentication
   - blocks
-  - context
+  - contexts
   - development  
-  - feeds
+  - web_service
   - forms
-  - media  
-  - migration    
+  - digital_assets
+  - migration
   - multilingual
-  - security  
-  - workflow
-  - views
+  - secure 
+  - lifecycle
+  - displays

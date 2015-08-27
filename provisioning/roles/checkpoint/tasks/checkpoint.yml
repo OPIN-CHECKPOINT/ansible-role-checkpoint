@@ -7,7 +7,7 @@
     repo={{ common_repo_url }}
     version={{ common_version }}
     update={{ common_keep_updated }}
-    dest={{ drupal_core_path }}/sites/all/modules/features/common/
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/common/
   when: '"common" in checkpoint_modules'
 
 # Intranet: Administration
@@ -47,13 +47,13 @@
   when: '"blocks" in checkpoint_modules'
 
 # Intranet: Context
-- name: Check out context module
+- name: Check out contexts module
   git: >
-    repo={{ context_repo_url }}
-    version={{ context_version }}
-    update={{ context_keep_updated }}
-    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/context/
-  when: '"context" in checkpoint_modules'
+    repo={{ contexts_repo_url }}
+    version={{ contexts_version }}
+    update={{ contexts_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/contexts/
+  when: '"contexts" in checkpoint_modules'
 
 # Intranet: Forms
 - name: Check out forms module
@@ -65,13 +65,13 @@
   when: '"forms" in checkpoint_modules'
 
 # Intranet: Media
-- name: Check out media module
+- name: Check out digital assets module
   git: >
-    repo={{ media_repo_url }}
-    version={{ media_version }}
-    update={{ media_keep_updated }}
-    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/media/
-  when: '"media" in checkpoint_modules'
+    repo={{ digital_assets_repo_url }}
+    version={{ digital_assets_version }}
+    update={{ digital_assets_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/digital_assets/
+  when: '"digital_assets" in checkpoint_modules'
 
 # Intranet: Multilingual
 - name: Check out multilingual module
@@ -92,22 +92,22 @@
   when: '"development" in checkpoint_modules'
 
 # Intranet: Security
-- name: Check out security module
+- name: Check out secure module
   git: >
-    repo={{ security_repo_url }}
-    version={{ security_version }}
-    update={{ security_keep_updated }}
-    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/security/
-  when: '"security" in checkpoint_modules'    
+    repo={{ secure_repo_url }}
+    version={{ secure_version }}
+    update={{ secure_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/secure/
+  when: '"secure" in checkpoint_modules'    
 
-# Intranet: Feeds
-- name: Check out feeds module
+# Intranet: Web Services
+- name: Check out web services module
   git: >
-    repo={{ feeds_repo_url }}
-    version={{ feeds_version }}
-    update={{ feeds_keep_updated }}
-    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/feeds/
-  when: '"feeds" in checkpoint_modules'    
+    repo={{ web_services_repo_url }}
+    version={{ web_services_version }}
+    update={{ web_services_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/web_services/
+  when: '"web_services" in checkpoint_modules'    
 
 # Intranet: Migration
 - name: Check out migration module
@@ -118,23 +118,23 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/migration/
   when: '"migration" in checkpoint_modules'  
 
-# Intranet: Feeds
-- name: Check out workflow module
+# Intranet: Life Cycle
+- name: Check out lifecycle module
   git: >
-    repo={{ workflow_repo_url }}
-    version={{ workflow_version }}
-    update={{ workflow_keep_updated }}
-    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/workflow/
-  when: '"workflow" in checkpoint_modules'  
+    repo={{ lifecycle_repo_url }}
+    version={{ lifecycle_version }}
+    update={{ lifecycle_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/lifecycle/
+  when: '"lifecycle" in checkpoint_modules'  
 
 # Intranet: Views
-- name: Check out views module
+- name: Check out displays module
   git: >
-    repo={{ views_repo_url }}
-    version={{ views_version }}
-    update={{ views_keep_updated }}
-    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/views/
-  when: '"views" in checkpoint_modules'        
+    repo={{ displays_repo_url }}
+    version={{ displays_version }}
+    update={{ displays_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/displays/
+  when: '"displays" in checkpoint_modules'        
 
 - name: Install modules with drush.
   command: >
