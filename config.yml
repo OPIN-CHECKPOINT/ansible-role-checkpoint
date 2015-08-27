@@ -44,7 +44,7 @@ checkpoint_modules:
   - blocks
   - contexts
   - development  
-  - web_service
+  - web_services
   - forms
   - digital_assets
   - migration
