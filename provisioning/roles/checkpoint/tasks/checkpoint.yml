@@ -1,0 +1,143 @@
+---
+# Intranet Installation
+
+# Intranet: Common
+- name: Check out commom module
+  git: >
+    repo={{ common_repo_url }}
+    version={{ common_version }}
+    update={{ common_keep_updated }}
+    dest={{ drupal_core_path }}/sites/all/modules/features/common/
+  when: '"common" in checkpoint_modules'
+
+# Intranet: Administration
+- name: Check out administration module
+  git: >
+    repo={{ administration_repo_url }}
+    version={{ administration_version }}
+    update={{ administration_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/administration/
+  when: '"administration" in checkpoint_modules'
+
+# Intranet: Audit
+- name: Check out audit module
+  git: >
+    repo={{ audit_repo_url }}
+    version={{ audit_version }}
+    update={{ audit_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/audit/
+  when: '"audit" in checkpoint_modules'
+
+# Intranet: Authentication
+- name: Check out authentication module
+  git: >
+    repo={{ authentication_repo_url }}
+    version={{ authentication_version }}
+    update={{ authentication_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/authentication/
+  when: '"authentication" in checkpoint_modules'
+
+# Intranet: Blocks
+- name: Check out blocks module
+  git: >
+    repo={{ blocks_repo_url }}
+    version={{ blocks_version }}
+    update={{ blocks_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/blocks/
+  when: '"blocks" in checkpoint_modules'
+
+# Intranet: Context
+- name: Check out context module
+  git: >
+    repo={{ context_repo_url }}
+    version={{ context_version }}
+    update={{ context_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/context/
+  when: '"context" in checkpoint_modules'
+
+# Intranet: Forms
+- name: Check out forms module
+  git: >
+    repo={{ forms_repo_url }}
+    version={{ forms_version }}
+    update={{ forms_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/forms/
+  when: '"forms" in checkpoint_modules'
+
+# Intranet: Media
+- name: Check out media module
+  git: >
+    repo={{ media_repo_url }}
+    version={{ media_version }}
+    update={{ media_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/media/
+  when: '"media" in checkpoint_modules'
+
+# Intranet: Multilingual
+- name: Check out multilingual module
+  git: >
+    repo={{ multilingual_repo_url }}
+    version={{ multilingual_version }}
+    update={{ multilingual_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/multilingual/
+  when: '"multilingual" in checkpoint_modules'
+
+# Intranet: Development
+- name: Check out development module
+  git: >
+    repo={{ development_repo_url }}
+    version={{ development_version }}
+    update={{ development_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/development/
+  when: '"development" in checkpoint_modules'
+
+# Intranet: Security
+- name: Check out security module
+  git: >
+    repo={{ security_repo_url }}
+    version={{ security_version }}
+    update={{ security_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/security/
+  when: '"security" in checkpoint_modules'    
+
+# Intranet: Feeds
+- name: Check out feeds module
+  git: >
+    repo={{ feeds_repo_url }}
+    version={{ feeds_version }}
+    update={{ feeds_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/feeds/
+  when: '"feeds" in checkpoint_modules'    
+
+# Intranet: Migration
+- name: Check out migration module
+  git: >
+    repo={{ migration_repo_url }}
+    version={{ migration_version }}
+    update={{ migration_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/migration/
+  when: '"migration" in checkpoint_modules'  
+
+# Intranet: Feeds
+- name: Check out workflow module
+  git: >
+    repo={{ workflow_repo_url }}
+    version={{ workflow_version }}
+    update={{ workflow_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/workflow/
+  when: '"workflow" in checkpoint_modules'  
+
+# Intranet: Views
+- name: Check out views module
+  git: >
+    repo={{ views_repo_url }}
+    version={{ views_version }}
+    update={{ views_keep_updated }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/views/
+  when: '"views" in checkpoint_modules'        
+
+- name: Install modules with drush.
+  command: >
+    drush en -y {{ checkpoint_modules | join(" ") }}
+    chdir={{ drupal_core_path }}  
+  ignore_errors: yes

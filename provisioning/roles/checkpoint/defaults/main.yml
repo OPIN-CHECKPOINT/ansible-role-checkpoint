@@ -1,0 +1,78 @@
+---
+# Configuration
+
+# Repositories
+# Common
+common_repo_url: "https://github.com/OPIN-CHECKPOINT/common.git"
+common_version: "HEAD"
+common_keep_updated: no
+
+# Administration
+administration_repo_url: "https://github.com/OPIN-CHECKPOINT/administration.git"
+administration_version: "HEAD"
+administration_keep_updated: no
+
+# Audit
+audit_repo_url: "https://github.com/OPIN-CHECKPOINT/audit.git"
+audit_version: "HEAD"
+audit_keep_updated: no
+
+# Authentication
+authentication_repo_url: "https://github.com/OPIN-CHECKPOINT/authentication.git"
+authentication_version: "HEAD"
+authentication_keep_updated: no
+
+# Blocks
+blocks_repo_url: "https://github.com/OPIN-CHECKPOINT/blocks.git"
+blocks_version: "HEAD"
+blocks_keep_updated: no
+
+# Context
+context_repo_url: "https://github.com/OPIN-CHECKPOINT/context.git"
+context_version: "HEAD"
+context_keep_updated: no
+
+# Forms
+forms_repo_url: "https://github.com/OPIN-CHECKPOINT/forms.git"
+forms_version: "HEAD"
+forms_keep_updated: no
+
+# Media
+media_repo_url: "https://github.com/OPIN-CHECKPOINT/media.git"
+media_version: "HEAD"
+media_keep_updated: no
+
+# Development
+development_repo_url: "https://github.com/OPIN-CHECKPOINT/development.git"
+development_version: "HEAD"
+development_keep_updated: no
+
+# Feeds
+feeds_repo_url: "https://github.com/OPIN-CHECKPOINT/feeds.git"
+feeds_version: "HEAD"
+feeds_keep_updated: no
+
+# Migration
+migration_repo_url: "https://github.com/OPIN-CHECKPOINT/migration.git"
+migration_version: "HEAD"
+migration_keep_updated: no
+
+# Multilingual
+multilingual_repo_url: "https://github.com/OPIN-CHECKPOINT/multilingual.git"
+multilingual_version: "HEAD"
+multilingual_keep_updated: no
+
+# Security
+security_repo_url: "https://github.com/OPIN-CHECKPOINT/security.git"
+security_version: "HEAD"
+security_keep_updated: no
+
+# Workflow
+workflow_repo_url: "https://github.com/OPIN-CHECKPOINT/workflow.git"
+workflow_version: "HEAD"
+workflow_keep_updated: no
+
+# Views
+views_repo_url: "https://github.com/OPIN-CHECKPOINT/views.git"
+views_version: "HEAD"
+views_keep_updated: no
