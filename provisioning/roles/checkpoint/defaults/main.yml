@@ -48,9 +48,9 @@ development_version: "HEAD"
 development_keep_updated: no
 
 # Web Service
-web_service_repo_url: "https://github.com/OPIN-CHECKPOINT/web_services.git"
-web_service_version: "HEAD"
-web_service_keep_updated: no
+web_services_repo_url: "https://github.com/OPIN-CHECKPOINT/web_services.git"
+web_services_version: "HEAD"
+web_services_keep_updated: no
 
 # Migration
 migration_repo_url: "https://github.com/OPIN-CHECKPOINT/migration.git"
