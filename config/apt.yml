@@ -19,6 +19,7 @@ apt_build_packages:
 apt_default_packages_install: yes  # Install some packages (see list bellow)
 apt_default_packages:         # List of packages which be installed
   - command-not-found
+  - curl
   - git
   - htop
   - iftop
@@ -30,9 +31,4 @@ apt_default_packages:         # List of packages which be installed
   - sysstat
   - vim
   - wget
-apt_packages:         # Set list of additional packages which will be installed
-  - acl
-  - curl
-  - python-apt
-  - python-pycurl
-  - php5-readline
+apt_packages: []              # Set list of additional packages which will be installed
