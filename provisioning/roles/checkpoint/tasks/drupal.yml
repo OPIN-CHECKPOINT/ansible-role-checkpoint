@@ -12,6 +12,7 @@
     repo={{ drupal_repo_url }}
     version={{ drupal_core_version }}
     update={{ drupal_keep_updated }}
+    depth=1
     dest={{ drupal_core_path }}
 
 # Download Checkpoint using Git.
@@ -19,7 +20,8 @@
   git: >
     repo={{ checkpoint_repo_url }}
     version={{ checkpoint_version }}
-    update={{ checkpoint_version }}
+    update={{ checkpoint_keep_updated }}
+    depth=1
     dest={{ drupal_core_path }}/profiles/checkpoint/
 
 # Intall Drupal
