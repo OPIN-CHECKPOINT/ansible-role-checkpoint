@@ -42,16 +42,16 @@ installed_extras:
 checkpoint_modules:
   - common
   - administration
-  - audit
-  - authentication
-  - blocks
-  - contexts
+  # - audit
+  # - authentication
+  # - blocks
+  # - contexts
   - development  
-  - web_services
-  - forms
-  - digital_assets
-  - migration
-  - multilingual
-  - secure 
-  - lifecycle
-  - displays
+  # - web_services
+  # - forms
+  # - digital_assets
+  # - migration
+  # - multilingual
+  # - secure 
+  # - lifecycle
+  # - displays
