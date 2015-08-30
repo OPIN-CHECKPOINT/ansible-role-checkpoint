@@ -21,6 +21,9 @@ vagrant_cpus: 2
 ansible_os_family: Debian
 #ansible_os_family: RedHat
 
+build_environment: development
+# build_environment: production
+
 # Server Extras
 installed_extras:
   - mailhogx
@@ -38,17 +41,17 @@ installed_extras:
 # Intranet Modules
 checkpoint_modules:
   - common
-#  - administration
-#  - audit
-#  - authentication
-#  - blocks
-#  - contexts
-#  - development  
-#  - web_services
-#  - forms
-#  - digital_assets
-#  - migration
-#  - multilingual
-#  - secure 
-#  - lifecycle
-#  - displays
+  - administration
+  - audit
+  - authentication
+  - blocks
+  - contexts
+  - development  
+  - web_services
+  - forms
+  - digital_assets
+  - migration
+  - multilingual
+  - secure 
+  - lifecycle
+  - displays

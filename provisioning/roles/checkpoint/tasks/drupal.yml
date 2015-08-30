@@ -14,6 +14,15 @@
     update={{ drupal_keep_updated }}
     dest={{ drupal_core_path }}
 
+# Download Checkpoint using Git.
+- name: Check out Checkpoint profile
+  git: >
+    repo={{ checkpoint_repo_url }}
+    version={{ drupal_core_version }}
+    update={{ checkpoint_version }}
+    dest={{ drupal_core_path }}/profiles/checkpoint/
+
+# Intall Drupal
 - name: Install Drupal.
   command: >
     drush si {{ drupal_install_profile }} -y
@@ -37,3 +46,16 @@
     state=directory
     recurse=yes
 
+# Disable the overlay and toolbar modules
+- name: Disable the overlay and toolbar modules
+  command: >
+    drush dis -y overlay, toolbar
+    chdir={{ drupal_core_path }}  
+  ignore_errors: yes
+
+# Install all the Checkpoint modules
+- name: Install Checkpoint modules with drush.
+  command: >
+    drush en -y {{ checkpoint_modules | join(" ") }}
+    chdir={{ drupal_core_path }}  
+  ignore_errors: yes  

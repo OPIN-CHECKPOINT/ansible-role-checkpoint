@@ -1,7 +1,7 @@
 ---
-# Intranet Installation
+# Intranet Installation (Development)
 
-# Intranet: Common
+# Common
 - name: Check out commom module
   git: >
     repo={{ common_repo_url }}
@@ -10,7 +10,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/common/
   when: '"common" in checkpoint_modules'
 
-# Intranet: Administration
+# Administration
 - name: Check out administration module
   git: >
     repo={{ administration_repo_url }}
@@ -19,7 +19,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/administration/
   when: '"administration" in checkpoint_modules'
 
-# Intranet: Audit
+# Audit
 - name: Check out audit module
   git: >
     repo={{ audit_repo_url }}
@@ -28,7 +28,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/audit/
   when: '"audit" in checkpoint_modules'
 
-# Intranet: Authentication
+# Authentication
 - name: Check out authentication module
   git: >
     repo={{ authentication_repo_url }}
@@ -37,7 +37,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/authentication/
   when: '"authentication" in checkpoint_modules'
 
-# Intranet: Blocks
+# Blocks
 - name: Check out blocks module
   git: >
     repo={{ blocks_repo_url }}
@@ -46,7 +46,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/blocks/
   when: '"blocks" in checkpoint_modules'
 
-# Intranet: Context
+# Context
 - name: Check out contexts module
   git: >
     repo={{ contexts_repo_url }}
@@ -55,7 +55,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/contexts/
   when: '"contexts" in checkpoint_modules'
 
-# Intranet: Forms
+# Forms
 - name: Check out forms module
   git: >
     repo={{ forms_repo_url }}
@@ -64,7 +64,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/forms/
   when: '"forms" in checkpoint_modules'
 
-# Intranet: Media
+# Media
 - name: Check out digital assets module
   git: >
     repo={{ digital_assets_repo_url }}
@@ -73,7 +73,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/digital_assets/
   when: '"digital_assets" in checkpoint_modules'
 
-# Intranet: Multilingual
+# Multilingual
 - name: Check out multilingual module
   git: >
     repo={{ multilingual_repo_url }}
@@ -82,7 +82,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/multilingual/
   when: '"multilingual" in checkpoint_modules'
 
-# Intranet: Development
+# Development
 - name: Check out development module
   git: >
     repo={{ development_repo_url }}
@@ -91,7 +91,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/development/
   when: '"development" in checkpoint_modules'
 
-# Intranet: Security
+# Security
 - name: Check out secure module
   git: >
     repo={{ secure_repo_url }}
@@ -100,7 +100,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/secure/
   when: '"secure" in checkpoint_modules'    
 
-# Intranet: Web Services
+# Web Services
 - name: Check out web services module
   git: >
     repo={{ web_services_repo_url }}
@@ -109,7 +109,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/web_services/
   when: '"web_services" in checkpoint_modules'    
 
-# Intranet: Migration
+# Migration
 - name: Check out migration module
   git: >
     repo={{ migration_repo_url }}
@@ -118,7 +118,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/migration/
   when: '"migration" in checkpoint_modules'  
 
-# Intranet: Life Cycle
+# Life Cycle
 - name: Check out lifecycle module
   git: >
     repo={{ lifecycle_repo_url }}
@@ -127,7 +127,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/lifecycle/
   when: '"lifecycle" in checkpoint_modules'  
 
-# Intranet: Views
+# Views
 - name: Check out displays module
   git: >
     repo={{ displays_repo_url }}
@@ -136,6 +136,7 @@
     dest={{ drupal_core_path }}/profiles/checkpoint/modules/features/displays/
   when: '"displays" in checkpoint_modules'        
 
+# Install all the checkpoint modules
 - name: Install modules with drush.
   command: >
     drush en -y {{ checkpoint_modules | join(" ") }}

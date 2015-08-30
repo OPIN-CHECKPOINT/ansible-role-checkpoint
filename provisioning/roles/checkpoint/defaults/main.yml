@@ -1,7 +1,11 @@
 ---
 # Configuration
 
-# Repositories
+# Checkpoint Profile
+checkpoint_repo_url: "https://github.com/OPIN-CHECKPOINT/checkpoint.git"
+checkpoint_version: "HEAD"
+checkpoint_keep_updated: no
+
 # Common
 common_repo_url: "https://github.com/OPIN-CHECKPOINT/common.git"
 common_version: "HEAD"
