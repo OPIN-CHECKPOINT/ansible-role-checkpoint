@@ -56,8 +56,8 @@
   ignore_errors: yes
 
 # Install all the Checkpoint modules
-- name: Install Checkpoint modules with drush.
-  command: >
-    drush en -y {{ checkpoint_modules | join(" ") }}
-    chdir={{ drupal_core_path }}  
-  ignore_errors: yes  
+# - name: Install Checkpoint modules with drush.
+#  command: >
+#    drush en -y {{ checkpoint_modules | join(" ") }}
+#    chdir={{ drupal_core_path }}  
+#  ignore_errors: yes  
