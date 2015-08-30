@@ -18,7 +18,7 @@
 - name: Check out Checkpoint profile
   git: >
     repo={{ checkpoint_repo_url }}
-    version={{ drupal_core_version }}
+    version={{ checkpoint_core_version }}
     update={{ checkpoint_version }}
     dest={{ drupal_core_path }}/profiles/checkpoint/
 
