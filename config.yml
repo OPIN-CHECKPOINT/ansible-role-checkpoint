@@ -46,7 +46,7 @@ checkpoint_modules:
   # - authentication
   # - blocks
   # - contexts
-  - development  
+  # - development  
   # - web_services
   # - forms
   # - digital_assets

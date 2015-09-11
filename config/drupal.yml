@@ -3,7 +3,7 @@
 
 # The core version you want to use (e.g. 6.x, 7.x, 8.0.x).
 # drupal_core_version: "7.x"
-drupal_core_version: "7.39"
+drupal_core_version: "7.x"
 
 # The path where Drupal will be downloaded and installed.
 drupal_core_path: "{{ vagrant_webroot }}"
@@ -27,7 +27,7 @@ drupal_mysql_password: drupal
 drupal_mysql_database: drupal
 
 # The Drupal git url from which Drupal will be cloned.
-drupal_repo_url: "http://git.drupal.org/project/drupal.git"
+drupal_repo_url: "https://github.com/OPIN-DRUPAL/drupal.git"
 
 # Whether to update the repo above to the latest commit in the branch identified
 # by `drupal_core_version` (the git tag or branch) whenever this playbook runs.
